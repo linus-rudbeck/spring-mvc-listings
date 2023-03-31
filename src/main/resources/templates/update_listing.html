@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listings</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header"/>
+
+<main>
+
+    <div class="solo-listing">
+
+        <form th:action="@{/listings/{id}/edit(id=${listing.id})}" method="post" enctype="multipart/form-data">
+
+            <input type="text" id="title" name="title" placeholder="Title" th:value="${listing.title}"> <br>
+
+            <textarea id="description" name="description" placeholder="Description" th:text="${listing.description}"></textarea><br>
+
+            <input type="file" name="listing-image" id="listing-image"> <br>
+
+            <button class="btn" type="submit">Save</button>
+
+        </form>
+
+        <form th:action="@{/listings/{id}/delete(id=${listing.id})}" method="post">
+
+            <button class="btn delete-btn" type="submit">Delete</button>
+
+        </form>
+
+    </div>
+
+
+</main>
+
+<div th:replace="fragments/footer"/>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listings</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header" />
+
+<main>
+
+    <div class="listings-grid">
+
+        <article th:each="listing : ${listings}" class="listing">
+            <img th:src="${listing.imageUrl}" />
+            <div>
+                <b th:text="${listing.title}"></b> <br>
+                <span th:text="${listing.description}"></span> <br>
+            </div>
+
+            <a th:href="@{/listings/{id}(id=${listing.id})}">Show</a>
+            <a th:href="@{/listings/{id}/edit(id=${listing.id})}">Edit</a>
+        </article>
+
+    </div>
+
+
+</main>
+
+<div th:replace="fragments/footer" />
+
+</body>
+</html>
