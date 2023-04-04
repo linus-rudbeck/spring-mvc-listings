@@ -10,9 +10,9 @@ CREATE TABLE listings (
     PRIMARY KEY (listing_id)
 );
 
-SELECT * FROM listings;
-
 INSERT INTO listings (title, description, image_url) VALUES
     ('Some cat', 'This is a cat', 'https://placehold.it/500?text=Cat'),
     ('Some dog', 'This is a dog', 'https://placehold.it/500?text=Dog'),
     ('Some parrot', 'This is a parrot', 'https://placehold.it/500?text=Parrot');
+
+SELECT * FROM listings;
