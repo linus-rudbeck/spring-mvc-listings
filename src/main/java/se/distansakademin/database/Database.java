@@ -37,9 +37,9 @@ public class Database {
     }
 
     public void setLiveCredentials(){
-        dbUrl = "jdbc:mysql://database-1-instance-1.cq9epjboz7zy.eu-north-1.rds.amazonaws.com/listings_db";
-        dbUsername = "admin";
-        dbPassword = "XWDFo5952icroLcDrCfT";
+        dbUrl = "NOT_IN_USE";
+        dbUsername = "NOT_IN_USE";
+        dbPassword = "NOT_IN_USE";
     }
 
     public boolean insertListing(Listing listing){
