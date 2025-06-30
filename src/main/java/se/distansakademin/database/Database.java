@@ -9,9 +9,9 @@ import java.sql.Statement;
 
 public class Database {
 
-    private String dbUrl = "";
-    private String dbUsername = "";
-    private String dbPassword = "";
+    private String dbUrl;
+    private String dbUsername;
+    private String dbPassword;
 
     protected Connection conn;
 
@@ -37,9 +37,9 @@ public class Database {
     }
 
     public void setLiveCredentials(){
-        dbUrl = "jdbc:mysql:///listings_db";
+        dbUrl = "jdbc:mysql://database-1-instance-1.cq9epjboz7zy.eu-north-1.rds.amazonaws.com/listings_db";
         dbUsername = "admin";
-        dbPassword = "";
+        dbPassword = "XWDFo5952icroLcDrCfT";
     }
 
     public boolean insertListing(Listing listing){

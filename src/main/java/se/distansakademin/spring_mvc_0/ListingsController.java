@@ -18,7 +18,6 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
-// @RequestMapping("/listings")
 public class ListingsController {
 
 
@@ -52,10 +51,7 @@ public class ListingsController {
 
     // GET request for displaying a form to create a new listing
     @GetMapping("/listings/new")
-    public String showCreateListingForm(Model model) {
-        Listing listing = new Listing();
-        model.addAttribute("listing", listing);
-
+    public String showCreateListingForm() {
         return "create_listing";
     }
 
@@ -112,6 +108,7 @@ public class ListingsController {
         AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
                 .withRegion(Regions.EU_NORTH_1)
                 .build();
+
 
         String bucketName = "bucket-5745172304";
         String objectKey = "listings/" + UUID.randomUUID() + ".jpg";
